@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GuitarXCode</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: #222;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+      color: #ffcc00;
+      margin: 0;
+    }
+
+    section {
+      width: 90%;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #1e1e1e;
+      border-radius: 12px;
+      border: 2px solid #333;
+    }
+
+    h2 {
+      color: #00ffff;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p, pre {
+      color: #ccc;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff9900;
+    }
+
+    #chord-output, #song-output {
+      font-family: monospace;
+      font-size: 1rem;
+      background: #000;
+      color: #0f0;
+      padding: 1rem;
+      margin-top: 1rem;
+      white-space: pre;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎸 GuitarXCode</h1>
+  </header>
+
+  <section id="tribute">
+    <h2>🎖 Tribute</h2>
+    <p>This project is a birthday tribute to my elder brother — a passionate classical guitarist, a brilliant coder, and someone who inspires me every day. Currently studying Mining at NIT Rourkela, but already building cool things with Flask, Python, and code! Happy 22nd Birthday Dada! 🎉</p>
+  </section>
+<style>
+    :root {
+      --bg-dark: #0f0f0f;
+      --bg-light: #f5f5f5;
+      --primary: #ffcc00;
+      --text-light: #ffffff;
+      --text-dark: #222222;
+      --card-bg-dark: #1f1f2e;
+      --card-bg-light: #ffffff;
+    }* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  transition: all 0.3s ease-in-out;
+}
+header {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #121212;
+  border-bottom: 2px solid #333;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  color: var(--primary);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.05);
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-bg-dark);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: #000;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+  }
+}
+
+  </style>
+  <main>
+    <div class="intro">
+      <p>This is a tribute to your amazing journey — from mining to full-stack development, from strings of nylon to strings of code. Happy 22nd Birthday, Dada! 🎸</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Flask Market</h3>
+        <p>Your first app using Flask, Python, and Bootstrap. A real-world full-stack project.</p>
+      </div>
+ <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Designed and developed by your little sibling – showcasing your coding and music.</p>
+      </div>
+      <div class="card">
+        <h3>Next Big Dream</h3>
+        <p>Maybe a Django-based web app or a guitar tuner using AI? The future is yours!</p>
+      </div>
+      <div class="card">
+        <h3>Guitar Journey</h3>
+        <p>From "Romance Anónimo" to your original tunes – music is your second language.</p>
+      </div>
+      <div class="card">
+        <h3>Siblings in Harmony</h3>
+        <p>Let’s record and upload our duet. Memories in melody – forever online.</p>
+      </div>
+    </div>
+  </main> 
+    <section id="chord-visualizer">
+    <h2>🎵 Chord Visualizer</h2>
+    <p>Select a chord to visualize:</p>
+    <div>
+      <button onclick="showChord('C')">C</button>
+      <button onclick="showChord('G')">G</button>
+      <button onclick="showChord('D')">D</button>
+      <button onclick="showChord('E')">E</button>
+      <button onclick="showChord('A')">A</button>
+      <button onclick="showChord('Am')">Am</button>
+      <button onclick="showChord('Em')">Em</button>
+      <button onclick="showChord('Dm')">Dm</button>
+    </div>
+    <div style="margin-top: 1rem;">
+      <button onclick="showChord('E5')">E5</button>
+      <button onclick="showChord('A5')">A5</button>
+      <button onclick="showChord('D5')">D5</button>
+      <button onclick="showChord('G5')">G5</button>
+    </div>
+    <pre id="chord-output">Choose a chord to begin...</pre>
+  </section>
+
+  <section id="songbook">
+    <h2>📚 Songbook</h2>
+    <p>Click a song to view its chords & lyrics:</p>
+    <div>
+      <button onclick="loadSong('Perfect')">Perfect - Ed Sheeran</button>
+      <button onclick="loadSong('Photograph')">Photograph - Ed Sheeran</button>
+      <button onclick="loadSong('Mon Majhi Re')">Mon Majhi Re - Bengali</button>
+      <button onclick="loadSong('Choo Lo')">Choo Lo - The Local Train</button>
+    </div>
+    <pre id="song-output">Choose a song to see its chords...</pre>
+  </section>
+
+  <script>
+    function showChord(chord) {
+      const chords = {
+        C: `
+e|---|---|---|
+B|---|---|---|
+G|---|-O-|---|
+D|---|-O-|---|
+A|---|---|-O-|
+E|---|---|---|`,
+
+        G: `
+e|---|---|-O-|
+B|---|---|---|
+G|---|---|---|
+D|---|---|---|
+A|---|---|-O-|
+E|---|-O-|---|`,
+
+        D: `
+e|---|-O-|---|
+B|---|---|-O-|
+G|---|-O-|---|
+D|---|---|---|
+A|---|---|---|
+E|---|---|---|`,
+
+        E: `
+e|---|---|---|
+B|---|---|---|
+G|---|-O-|---|
+D|---|-O-|---|
+A|---|---|-O-|
+E|---|---|---|`,
+
+        A: `
+e|---|---|---|
+B|---|-O-|---|
+G|---|-O-|---|
+D|---|-O-|---|
+A|---|---|---|
+E|---|---|---|`,
+
+        Am: `
+e|---|---|---|
+B|---|---|---|
+G|---|-O-|---|
+D|---|-O-|---|
+A|---|---|-O-|
+E|---|---|---|`,
+
+        Em: `
+e|---|---|---|
+B|---|---|---|
+G|---|---|---|
+D|---|-O-|---|
+A|---|-O-|---|
+E|---|---|---|`,
+
+        Dm: `
+e|---|-O-|---|
+B|---|---|---|
+G|---|-O-|---|
+D|---|---|---|
+A|---|---|---|
+E|---|---|---|`,
+
+        E5: `
+e|---|---|---|
+B|---|---|---|
+G|---|---|---|
+D|---|---|-O-|
+A|---|---|-O-|
+E|---|---|-O-|`,
+
+        A5: `
+e|---|---|---|
+B|---|---|---|
+G|---|---|---|
+D|---|---|-O-|
+A|---|---|-O-|
+E|---|---|---|`,
+
+        D5: `
+e|---|---|---|
+B|---|---|---|
+G|---|---|---|
+D|---|---|-O-|
+A|---|---|-O-|
+E|---|---|---|`,
+
+        G5: `
+e|---|---|---|
+B|---|---|---|
+G|---|---|-O-|
+D|---|---|-O-|
+A|---|---|---|
+E|---|---|-O-|`
+      };
+      document.getElementById('chord-output').textContent = chords[chord] || 'Chord not found';
+    }
+
+    function loadSong(songName) {
+      const songs = {
+        'Perfect': `
+G        Em
+I found a love for me
+C                  D
+Darling just dive right in, and follow my lead
+
+G        Em
+Well I found a girl, beautiful and sweet
+C                        D
+Oh I never knew you were the someone waiting for me
+`,
+
+        'Photograph': `
+D         Bm
+Loving can hurt, loving can hurt sometimes
+G                      A
+But it's the only thing that I know
+
+D                 Bm
+When it gets hard, you know it can get hard sometimes
+G                           A
+It is the only thing that makes us feel alive
+`,
+
+        'Mon Majhi Re': `
+Am         G
+মন মাঝি রে, ওই পারেতে
+F          C
+ভেসে যাই, চলো সঙ্গী হই
+
+Am            G
+অভিমানে আজ ভাসছে মন
+F              C
+দূর অতলে ডুবে যাই...
+`,
+
+        'Choo Lo': `
+G           D
+Choo lo jo mujhe
+Em          C
+Tum kabhi, kahin
+
+G           D
+Har jagah main dhoondhu
+Em         C
+Bas tumhi, tumhi
+`
+      };
+      document.getElementById('song-output').textContent = songs[songName] || 'Song not found';
+    }
+  </script>
+</body>
+</html>
+      Again Happy Birthday Dada. When you need any help i am here.....
+ <div class="footer">
+    Created with 💖 by your sibling | GuitarXCode 2025
+  </div> 
