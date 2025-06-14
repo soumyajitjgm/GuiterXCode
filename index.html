@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GuitarXCode</title>
   <style>
+    *{
+      aspect ratio: 16:9
+    }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #111;
@@ -251,7 +254,20 @@ main {
     </div>
     <pre id="song-output">Choose a song to see its chords...</pre>
   </section>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  window.onload = function () {
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
 
+    setTimeout(() => {
+      alert("🎉 Happy 22nd Birthday, Dada!");
+    }, 500);
+  };
+</script>
   <script>
     function showChord(chord) {
       const chords = {
