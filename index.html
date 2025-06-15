@@ -235,8 +235,8 @@ main {
       <button onclick="showChord('Dm')">Dm</button>
     </div>
     <div style="margin-top: 1rem;">
-      <button onclick="showChord('E5')">E5</button>
-      <button onclick="showChord('A5')">A5</button>
+      <button onclick="showChord('F')">E5</button>
+      <button onclick="showChord('E7')">A5</button>
       <button onclick="showChord('D5')">D5</button>
       <button onclick="showChord('G5')">G5</button>
     </div>
@@ -251,6 +251,7 @@ main {
       <button onclick="loadSong('Photograph')">Photograph - Ed Sheeran</button>
       <button onclick="loadSong('Mon Majhi Re')">Mon Majhi Re - Bengali</button>
       <button onclick="loadSong('Choo Lo')">Choo Lo - The Local Train</button>
+       <button onclick="loadSong('Hotel California')">Hotel California - Eagles</button>
     </div>
     <pre id="song-output">Choose a song to see its chords...</pre>
   </section>
@@ -273,8 +274,8 @@ main {
       const chords = {
         C: `
 e|---|---|---|
-B|---|---|---|
-G|---|-O-|---|
+B|-O-|---|---|
+G|---|---|---|
 D|---|-O-|---|
 A|---|---|-O-|
 E|---|---|---|`,
@@ -284,8 +285,8 @@ e|---|---|-O-|
 B|---|---|---|
 G|---|---|---|
 D|---|---|---|
-A|---|---|-O-|
-E|---|-O-|---|`,
+A|---|-O-|---|
+E|---|---|-O-|`,
 
         D: `
 e|---|-O-|---|
@@ -313,10 +314,10 @@ E|---|---|---|`,
 
         Am: `
 e|---|---|---|
-B|---|---|---|
+B|---|-O-|---|
 G|---|-O-|---|
-D|---|-O-|---|
-A|---|---|-O-|
+D|---|---|-O-|
+A|---|---|---|
 E|---|---|---|`,
 
         Em: `
@@ -328,27 +329,27 @@ A|---|-O-|---|
 E|---|---|---|`,
 
         Dm: `
-e|---|-O-|---|
-B|---|---|---|
+e|-O-|---|---|
+B|---|---|-O-|
 G|---|-O-|---|
 D|---|---|---|
 A|---|---|---|
 E|---|---|---|`,
 
-        E5: `
-e|---|---|---|
-B|---|---|---|
-G|---|---|---|
-D|---|---|-O-|
-A|---|---|-O-|
-E|---|---|-O-|`,
+        F: `
+e|-O-|---|---|
+B|-O-|---|---|
+G|-O-|-O-|---|
+D|-O-|---|-O-|
+A|-O-|---|-O-|
+E|-O-|---|---|`,
 
-        A5: `
+        E7: `
 e|---|---|---|
 B|---|---|---|
-G|---|---|---|
-D|---|---|-O-|
-A|---|---|-O-|
+G|-O-|---|---|
+D|---|---|---|
+A|---|-O-|---|
 E|---|---|---|`,
 
         D5: `
@@ -418,14 +419,28 @@ G           D
 Har jagah main dhoondhu
 Em         C
 Bas tumhi, tumhi
+`,
+        'Hotel California': `
+Am                        E7
+On a dark dessert highway, cool wind in my hair 
+G                    D
+Warm smell of colitas rising up through the air
+
+F                        C
+Up ahed in the distance, I saw a shimmering light
+Dm
+My head grew heavy and my sight grew dim
+E7
+I had to stop for the night
 `
+
       };
       document.getElementById('song-output').textContent = songs[songName] || 'Song not found';
     }
   </script>
 </body>
 </html>
-      Again Happy Birthday Dada. When you need any help i am here.....
+      Again Happy Birthday Dada. When you need any help I am here.....
  <div class="footer">
     Created with 💖 by your sibling | GuitarXCode 2025
   </div> 
