@@ -78,6 +78,7 @@
   </style>
 </head>
 <body>
+   
   <header>
     <h1>🎸 GuitarXCode</h1>
   </header>
@@ -191,8 +192,59 @@ main {
   }
 }
 
+/* 🌑 Splash Screen */
+#splash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 1s ease;
+}
+
+#splash-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#splash-text {
+  font-size: 2.5rem;
+  font-family: 'Courier New', monospace;
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700;
+}
+
+/* 🔁 Fade out animation */
+.fade-out {
+  opacity: 0;
+}
+
+/* 👀 Hide and fade in main content */
+#main-site {
+  display: none;
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
   </style>
   <main>
+     
     <div class="intro">
       <p>This is a tribute to your amazing journey — from mining to full-stack development, from strings of nylon to strings of code. Happy 22nd Birthday, Dada! 🎸</p>
     </div>
@@ -254,19 +306,53 @@ main {
     <pre id="song-output">Choose a song to see its chords...</pre>
   </section>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script>
-  window.onload = function () {
-    confetti({
-      particleCount: 150,
-      spread: 70,
-      origin: { y: 0.6 }
-    });
+  <!-- 🎬 Splash Screen -->
+  <div id="splash">
+   
+    <h1 id="splash-text">🎸 Guitar<span style="color:#00ffcc;">X</span>Code</h1>
+ <div id="main-site">
+    <h2>Welcome to GuitarXCode!</h2>
+    <p>Explore the fusion of classical guitar and modern code 🎶💻</p>
 
-    setTimeout(() => {
+  </div>
+
+  <!-- 🌐 Main Website Content (Initially Hidden) -->
+  <h2>Welcome to GuitarXCode!</h2>
+    <p>Explore the fusion of classical guitar and modern code 🎶💻</p>
+ <!-- You can add your full website content here -->
+  </div>
+ 
+  <!-- 🚀 Script -->
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        const splash = document.getElementById("splash");
+        splash.classList.add("fade-out");
+
+        setTimeout(() => {
+          splash.style.display = "none";
+
+          const main = document.getElementById("main-site");
+          main.style.display = "block";
+          main.classList.add("fade-in");
+
+          // 🎉 Fire confetti
+          confetti({
+            particleCount: 150,
+            spread: 120,
+            origin: { y: 0.6 }
+          });
+
+        }, 1000); // wait for fade-out to finish
+      }, 2500); // show splash for 2.5s
+       setTimeout(() => {
       alert("🎉 Happy 22nd Birthday, Dada!");
     }, 500);
-  };
-</script>
+    };
+  </script>
+
+
+
   <script>
     function showChord(chord) {
       const chords = {
